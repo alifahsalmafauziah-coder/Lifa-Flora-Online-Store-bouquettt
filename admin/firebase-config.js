@@ -4,7 +4,7 @@
    ============================================================ */
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, collection, getDocs, setDoc, doc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { getFirestore, collection, getDocs, setDoc, deleteDoc, doc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyANUAN6InJBphGVg7_EIfcdvF8peLLEYzM",
@@ -58,6 +58,17 @@ async function saveOneProductToFirestore(product) {
   }
 }
 
+/* ---- Hapus satu produk dari Firestore ---- */
+async function deleteProductFromFirestore(id) {
+  try {
+    await deleteDoc(doc(db, "products", String(id)));
+    return true;
+  } catch (e) {
+    console.warn("Firestore delete error:", e);
+    return false;
+  }
+}
+
 /* ---- Dengarkan perubahan produk secara realtime ---- */
 function listenProducts(callback) {
   return onSnapshot(collection(db, "products"), (snapshot) => {
@@ -73,5 +84,6 @@ export {
   getProductsFromFirestore,
   saveProductsToFirestore,
   saveOneProductToFirestore,
+  deleteProductFromFirestore,
   listenProducts
 };

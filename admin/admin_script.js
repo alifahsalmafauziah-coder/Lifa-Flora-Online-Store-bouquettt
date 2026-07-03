@@ -40,14 +40,16 @@ async function loadFirebaseHelpers() {
     firebaseHelpers = {
       getProductsFromFirestore: mod.getProductsFromFirestore,
       saveProductsToFirestore: mod.saveProductsToFirestore,
-      saveOneProductToFirestore: mod.saveOneProductToFirestore
+      saveOneProductToFirestore: mod.saveOneProductToFirestore,
+      deleteProductFromFirestore: mod.deleteProductFromFirestore
     };
   } catch (e) {
     console.warn("Firebase unavailable in admin, using local fallback.", e);
     firebaseHelpers = {
       getProductsFromFirestore: async () => null,
       saveProductsToFirestore: async () => false,
-      saveOneProductToFirestore: async () => false
+      saveOneProductToFirestore: async () => false,
+      deleteProductFromFirestore: async () => false
     };
   }
   return firebaseHelpers;
@@ -244,12 +246,15 @@ function adjustStock(id, delta) {
   showToast("✅ Stok diperbarui.");
 }
 
-function deleteProduk(id) {
+async function deleteProduk(id) {
   if (!confirm("Hapus produk ini?")) return;
   products = products.filter(p => p.id !== id);
-  saveProducts();
+  localStorage.setItem(STORAGE_PRODUCTS_KEY, JSON.stringify(products));
   renderProdukTable();
   showToast("🗑️ Produk dihapus.");
+
+  const fb = await loadFirebaseHelpers();
+  await fb.deleteProductFromFirestore(id);
 }
 
 /* ============================================================
