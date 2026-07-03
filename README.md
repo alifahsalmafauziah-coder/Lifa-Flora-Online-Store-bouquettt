@@ -7,9 +7,13 @@
 | **Nama** | Alifah Salma Fauziah |
 | **NIM** | 209250117 |
 | **Program Studi** | Administrasi Bisnis 6 |
+| **Mata Kuliah** | Komputer Aplikasi IT-II (KAIT-II)|
+| **Semester** | Genap 2026 |
 
 🔗 **Repository:** https://github.com/alifahsalmafauziah-coder/Lifa-Flora-Online-Store-bouquettt
+
 🛍️ **Live site (customer):** https://alifahsalmafauziah-coder.github.io/Lifa-Flora-Online-Store-bouquettt/
+
 🔐 **Live site (admin):** https://alifahsalmafauziah-coder.github.io/Lifa-Flora-Online-Store-bouquettt/admin/admin_login.html
 
 ---
