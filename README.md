@@ -7,6 +7,7 @@
 | **Nama** | Alifah Salma Fauziah |
 | **NIM** | 209250117 |
 | **Program Studi** | Administrasi Bisnis 6 |
+|**Mata Kuliah** | Komputer Aplikasi IT-II (KAIT-II) 
 
 🔗 **Repository:** https://github.com/alifahsalmafauziah-coder/Lifa-Flora-Online-Store-bouquettt
 
@@ -33,7 +34,7 @@ Lifa Flora adalah toko bunga online yang menjual buket bunga segar dan buket cus
 
 ## 2. Target Market & Segmentasi Pelanggan
 
-**Target utama:** Usia 18–35 tahun, berdomisili di Bandung dan sekitarnya, aktif berbelanja online, dan sering mencari hadiah untuk momen spesial.
+**Target utama:** Usia 12–40 tahun, berdomisili di Bandung dan sekitarnya, aktif berbelanja online, dan sering mencari hadiah untuk momen spesial.
 
 Segmentasi pelanggan:
 1. **Pasangan muda / anniversary buyer** — mencari buket romantis (mawar, tulip, lavender) untuk hari jadi.
