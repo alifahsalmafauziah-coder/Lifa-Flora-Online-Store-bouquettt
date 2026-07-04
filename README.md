@@ -160,8 +160,6 @@ Setiap halaman customer (`index.html`, `detail_produk.html`, `keranjang.html`, `
 
 ## 📁 Struktur Proyek
 
-Struktur di bawah ini sesuai persis dengan isi folder proyek (hasil ekstrak ZIP):
-
 ```
 LIFA_FLORA/
 ├── README.md                      # Dokumentasi proyek (file ini)
